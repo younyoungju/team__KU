@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[1]:
 
 
 def get_EBS_entered(s, e):
@@ -35,7 +35,7 @@ def get_EBS_entered(s, e):
     return EBS_integrated
 
 
-# In[5]:
+# In[2]:
 
 
 def get_STT1_Google_entered(s, e):
@@ -70,7 +70,7 @@ def get_STT1_Google_entered(s, e):
     return STT_integrated
 
 
-# In[6]:
+# In[3]:
 
 
 def get_STT1_Transcribe_entered(s, e):
@@ -103,6 +103,40 @@ def get_STT1_Transcribe_entered(s, e):
     ####################################################
     
     return STT_integrated
+
+
+# In[4]:
+
+
+def get_EBS(s, e):
+    # 파일 이름 만들기 #################################################
+    EBS_filenames = []
+    for i in range(s, e+1):
+        n = '{0:05d}'.format(i)
+        EBS_fname = 'lec' + n + '_EBS.txt'
+        EBS_filenames.append(EBS_fname)
+    print(EBS_filenames)
+    ####################################################
+    
+    # 파일 불러오기 ###################################################
+    EBS_integrated = ''
+    try:
+        for _ in EBS_filenames:
+            with open('data/' + _, 'r', encoding = 'utf8') as f:
+                if EBS_filenames.index(_) == 0:
+                    EBS_integrated += f.read() 
+                else:
+                    EBS_integrated += '\n'+f.read()
+    except:
+        for _ in EBS_filenames:
+            with open('data/' + _, 'r') as f:
+                if EBS_filenames.index(_) == 0:
+                    EBS_integrated += f.read() 
+                else:
+                    EBS_integrated += '\n'+f.read()
+    ####################################################
+    
+    return EBS_integrated
 
 
 # In[ ]:
