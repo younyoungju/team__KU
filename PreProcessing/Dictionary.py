@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[63]:
 
 
 # symbol dictionary
@@ -21,7 +21,7 @@ sd = {'½': '이분의일',
  '¼': '사분의일',
  '′': '',
  '＜': '보다작다',
- '-': '빼기',
+ '-': '마이너스',
  '!': '',
  '④': '사번',
  'π': '파이',
@@ -56,7 +56,7 @@ sd = {'½': '이분의일',
  'tan': '탄젠트'}
 
 
-# In[3]:
+# In[ ]:
 
 
 ad = {
@@ -115,14 +115,18 @@ ad = {
 }
 
 
-# In[11]:
+# In[3]:
 
 
 def get_korean_pronunciation_of_number(n):
     nbased = {0 : '', 1 : '일', 2 : '이', 3 : '삼', 4 : '사', 5 : '오', 6 : '육', 7 : '칠', 8 : '팔', 9 : '구' }
     nkopro = {}
     for _ in range(n+1):
-        t = _//1000
+        c = (_%100000000)//10000000
+        b = (_%10000000)//1000000
+        s = (_%1000000)//100000
+        m = (_%100000)//10000
+        t = (_%10000)//1000
         h = (_%1000)//100
         d = (_%100)//10
         o = _%10
@@ -130,17 +134,112 @@ def get_korean_pronunciation_of_number(n):
         if _ == 0:
             nkopro[_] = '영'
         else:
+            cc = '' if c == 0 else ('천' if c == 1 else nbased[c] + '천')
+            bb = '' if b == 0 else ('백' if b == 1 else nbased[b] + '백')
+            ss = '' if s == 0 else ('십' if s == 1 else nbased[s] + '십')
+            if s == 0:
+                mm = '' if m == 0 else ('만' if m == 1 else nbased[m] + '만')
+            else:
+                mm = '만' if m == 0 else ('일만' if m == 1 else nbased[m] + '만')
             tt = '' if t == 0 else ('천' if t == 1 else nbased[t] + '천')
             hh = '' if h == 0 else ('백' if h == 1 else nbased[h] + '백')
             dd = '' if d == 0 else ('십' if d == 1 else nbased[d] + '십')
             oo = '' if o == 0 else nbased[o]
-            nkopro[_] = tt+hh+dd+oo
+            nkopro[_] = cc+bb+ss+mm+tt+hh+dd+oo
             
     return nkopro
 
 
-# In[12]:
+# In[6]:
 
 
-kopro = get_korean_pronunciation_of_number(9999) #~9999
+kopro = get_korean_pronunciation_of_number(9999999) #~99999
+
+
+# In[11]:
+
+
+kopro[1800178]
+
+
+# In[54]:
+
+
+kopro[999999]
+
+
+# In[55]:
+
+
+kopro[808214]
+
+
+# In[56]:
+
+
+kopro[818214]
+
+
+# In[57]:
+
+
+kopro[118214]
+
+
+# In[58]:
+
+
+kopro[108214]
+
+
+# In[59]:
+
+
+kopro[12548]
+
+
+# In[60]:
+
+
+kopro[118214]
+
+
+# In[61]:
+
+
+kopro[180000]
+
+
+# In[62]:
+
+
+kopro[118214]
+
+
+# In[35]:
+
+
+_ = 12548 #천오백십팔만
+c = (_%100000000)//10000000
+b = (_%10000000)//1000000
+s = (_%1000000)//100000
+m = (_%100000)//10000
+t = (_%10000)//1000
+h = (_%1000)//100
+d = (_%100)//10
+o = _%10
+print(c)
+print(b)
+print(s)
+print(m)
+print(t)
+print(h)
+print(d)
+print(o)
+
+
+# In[ ]:
+
+
+
 
