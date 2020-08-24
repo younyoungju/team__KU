@@ -22,14 +22,14 @@ def get_EBS_entered(s, e):
                 if EBS_filenames.index(_) == 0:
                     EBS_integrated += f.read() 
                 else:
-                    EBS_integrated += ' '+f.read()
+                    EBS_integrated += '\n'+f.read()
     except:
         for _ in EBS_filenames:
             with open('data/' + _, 'r') as f:
                 if EBS_filenames.index(_) == 0:
                     EBS_integrated += f.read() 
                 else:
-                    EBS_integrated += ' '+f.read()
+                    EBS_integrated += '\n'+f.read()
     ####################################################
     
     return EBS_integrated
@@ -57,14 +57,14 @@ def get_STT1_Google_entered(s, e):
                 if STT_filenames.index(_) == 0:
                     STT_integrated += f.read() 
                 else:
-                    STT_integrated += ' '+f.read()
+                    STT_integrated += '\n'+f.read()
     except:
         for _ in STT_filenames:
             with open('data/' + _, 'r') as f:
                 if STT_filenames.index(_) == 0:
                     STT_integrated += f.read() 
                 else:
-                    STT_integrated += ' '+f.read()   
+                    STT_integrated += '\n'+f.read()   
     ####################################################
     
     return STT_integrated
@@ -92,14 +92,14 @@ def get_STT1_Transcribe_entered(s, e):
                 if STT_filenames.index(_) == 0:
                     STT_integrated += f.read() 
                 else:
-                    STT_integrated += ' '+f.read()
+                    STT_integrated += '\n'+f.read()
     except:
         for _ in STT_filenames:
             with open('data/' + _, 'r') as f:
                 if STT_filenames.index(_) == 0:
                     STT_integrated += f.read() 
                 else:
-                    STT_integrated += ' '+f.read()
+                    STT_integrated += '\n'+f.read()
     ####################################################
     
     return STT_integrated
@@ -126,17 +126,23 @@ def get_EBS(s, e):
                 if EBS_filenames.index(_) == 0:
                     EBS_integrated += f.read() 
                 else:
-                    EBS_integrated += ' '+f.read()
+                    EBS_integrated += '\n'+f.read()
     except:
         for _ in EBS_filenames:
             with open('data/' + _, 'r') as f:
                 if EBS_filenames.index(_) == 0:
                     EBS_integrated += f.read() 
                 else:
-                    EBS_integrated += ' '+f.read()
+                    EBS_integrated += '\n'+f.read()
     ####################################################
     
     return EBS_integrated
+
+
+# In[2]:
+
+
+get_EBS(1,26)
 
 
 # In[1]:
@@ -157,7 +163,7 @@ def get_STT1_Google(s, e):
     
     try:
         for _ in STT_filenames:
-            with open('data/' + _, 'r', encoding = 'euc-kr') as f:
+            with open('data/' + _, 'r', encoding = 'utf8') as f:
                 if STT_filenames.index(_) == 0:
                     STT_integrated += f.read() 
                 else:
