@@ -15,11 +15,10 @@
   <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         # by clicking the learn more button you can view our API reference?????!!
     </div>
-
-<div class="alert alert-warning" role="alert" align="middle">
-  Convert <a href="#" class="alert-link">mp3 to flac</a> first!
+    <div class="alert alert-warning" role="alert" align="middle">
+    Convert <a href="#" class="alert-link">mp3 to flac</a> first!
     # directs user to a site where the file can be converted into a diff format
-</div>
+    </div>
 
    <!--Navbar-->
    <nav class="navbar navbar-expand-lg navbar-dark indigo mb-4"></nav>
@@ -64,15 +63,15 @@
         </form>
     <form class="form-group-lg align-items-md-center align-items-center"></form>
 
-{#  {{ dropzone.load_css() }}#}
-{#  {{ dropzone.style('border: 4px dashed #FD6A02; margin: 10%; min-height: 400px;') }}#}
+  {{ dropzone.load_css() }}
+  {{ dropzone.style('border: 4px dashed #FD6A02; margin: 10%; min-height: 400px;') }}
 
 </head>
 <body>
-{#  {{ dropzone.create(action='upload') }}#}
-{#  {{ dropzone.load_js() }}#}
-{#  {{ dropzone.config() }}#}
-</body>
+  {{ dropzone.create(action='upload') }}
+  {{ dropzone.load_js() }}
+  {{ dropzone.config() }}
+
 <div class="container-fluid" align=middle>
     <div class="row">
         <div class="col-md-4 offset-md-4" bg-light text-center>
