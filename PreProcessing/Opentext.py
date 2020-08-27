@@ -139,12 +139,6 @@ def get_EBS(s, e):
     return EBS_integrated
 
 
-# In[2]:
-
-
-get_EBS(1,26)
-
-
 # In[1]:
 
 
