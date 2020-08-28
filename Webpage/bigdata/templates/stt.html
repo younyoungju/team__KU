@@ -46,13 +46,15 @@
 
     <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="RNN()">
 
+<button class="btn btn-primary btn-lg"><a href="/admin"> List of files uploaded</a></button>
+
 </head>
 {% include 'dropzone.html' %}
 <div class="container-fluid" align=middle>
     <div class="row">
         <div class="col-md-4 offset-md-4" bg-light text-center>
-            <button type="button" class="btn btn-primary">Convert to STT</button>
-            <button type="button" class="btn btn-info">Convert to mp3</button>
+            <button type="button" class="btn btn-primary"><a href="/convert/">Convert to STT</a></button>
+            <button type="button" class="btn btn-info"><a href="/admin">List of files uploaded</a></button>
             <button type="button" class="btn btn-warning">Save as txt</button>
             <button type="button" class="btn btn-dark" align>Cancel</button>
         </div>
