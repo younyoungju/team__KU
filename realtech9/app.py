@@ -70,14 +70,19 @@ def move_forward():
     return render_template('index.html', forward_message=a);
 
 
-
+a = '가나다라마바ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ사'
 def pnt(a):
     return a[:30]
 
 
-# @app.route('/convert')
-# def convert():
-#     return render_template('RNN.py')
+@app.route('/convert')
+def convert():
+    # var = request.args.get('testabc')
+    var = pnt(a)
+    return render_template("test.html", ht_input = var)
+
+
+
 
 # @app.route('/list')
 # def list():
