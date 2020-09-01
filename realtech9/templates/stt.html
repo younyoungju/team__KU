@@ -46,16 +46,7 @@
     <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="RNN()">
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>
-        function RNN(){
-            $.ajax({
-              url: "RNN.py",
-             context: document.body
-            }).done(function() {
-             alert('finished python script');;
-            });
-        }
-    </script>
+
 
         <form class="form-inline md-form mr-auto mb-4   ">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -88,6 +79,10 @@
       <br>
       <br>
       <br>
+<form action="/forward/" method="post">
+    <button name="forwardBtn" type="submit">Forward</button>
+</form>
+
 
 </body>
 </html>

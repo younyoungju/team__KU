@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
      <!-- Image and text -->
-
     {% include 'list1.html' %}
     <title>Welcome to Tech-9!</title>
 </head>
 
 <body>
-
-
-<div class="jumbotron text-center">
-  <h1>Welcome to Tech-9!</h1>
-    <img class="img-fluid" src="static/logo1.png" alt="logo">
-  <p>Our service is ----</p>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>About Us</h3>
-      <p>Bigdata team 9: members... </p>
+    <div class = "container-fluid" align="middle">
+        <h1>Your Math Videos!</h1>
+        {% include 'navbar.html' %}
     </div>
-    <div class="col-sm-4">
-      <h3>Contact Us</h3>
-      <p>Korea University</p>
+    <div class="jumbotron text-center">
+        <h1>Welcome to Tech-9!</h1>
+        <img class="img-fluid" src="static/logo1.png" alt="logo">
+        <p>Our service is ----</p>
     </div>
-    <div class="col-sm-4">
-      <h3>Privacy Policy</h3>
-      <p>Terms of use
-          <br>
-          Copyright Claims
-
-      </p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>About Us</h3>
+          <p>Bigdata team 9: members... </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Contact Us</h3>
+          <p>Korea University</p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Privacy Policy</h3>
+          <p>Terms of use
+              <br>
+              Copyright Claims
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
 </body>
 </html>
