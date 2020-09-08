@@ -13,4 +13,7 @@
 * STT OpenAPI : STT Service 자동수행
 * 01 ~ 06 : STT Text 처리, 형태소분석, LSTM modeling
 
+![이미지 39](https://user-images.githubusercontent.com/25517592/92491996-d6d5b000-f22d-11ea-8456-6ba1459c2e00.png)
+
+
 ###### 한국 데이터 산업 진흥원
