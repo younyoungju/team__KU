@@ -11,5 +11,6 @@
 * data : STT 결과 및 중간변수
 * model : LSTM model, Tokenizer
 * STT OpenAPI : STT Service 자동수행
+* 01 ~ 06 : STT Text 처리, 형태소분석, LSTM modeling
 
 ###### 한국 데이터 산업 진흥원
