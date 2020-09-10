@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+
+    <title>Videos</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/offcanvas/">
+      <link href="../static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link href="../static/css/bootstrap.css" rel="stylesheet" >
+  </head>
+
+  <body>
+    {% include 'list1.html' %}
+{#    <div class="container">#}
+        <div class=" my-3 p-3 bg-white rounded  shadow-sm">
+            <h1 class="border-bottom border-gray pb-2 mb-0 text-xl-center"> 강의: {{ data[2] }} </h1>
+            <div class="media text-muted pt-3">
+                <video width="880" height="700"  top ='50'  left="100" controls autoplay>
+                    <source src={{ data[4] }}  type="video/mp4">
+                </video>
+                <div class="d-flex justify-content-between align-items-center ">
+                    <p>TEXT 가 여기로 갈거에요</p>
+                </div>
+            </div>
+        </div>
+
+{#    </div>#}
+
+
+
+    {% include 'footer.html' %}
+  </body>
+
+
+
+</html>
