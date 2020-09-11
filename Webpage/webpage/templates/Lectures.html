@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+
+    <title>Lectures</title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/offcanvas/">
+      <link href="../static/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <link href="../static/css/bootstrap.css" rel="stylesheet" integrity="pagination-page-info">
+{#      <link href="../static/css/pagination.css" rel="stylesheet">#}
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+  {% include 'list1.html' %}
+
+    <main role="main" class="container">
+       <div class=" my-3 p-3 bg-white rounded  shadow-sm">
+           <h1 class="border-bottom border-gray pb-2 mb-0"> EBS 중학 삼각함수 </h1>
+           {% for i in data %}
+               <a class="d-flex align-items-center p-3 my-3 text-white-50 rounded shadow-sm" href="/video/{{ i[0] }}">
+                   <div class="media text-muted pt-3">
+
+                    {{ loop.index}}
+                           <img src = {{ i[3] }}  width="170" height="110">
+
+                       <div class="media-body pb-3 mb-0 lh-125 ">
+                           <div class="d-flex justify-content-between align-items-center w-100 ">
+                            <div  class=" text-gray-dark border-gray border-bottom pb-2 mb-0" style="margin-left= 2.5px">강의제목 : {{ i[2] }}</div>
+
+                           </div>
+                           <span class="d-block"></span>
+
+                           <span class="d-block">강의설명 : {{ i[5] }}</span>
+
+                           <span class="d-block">Keyword : {{ i[6] }}</span>
+                       </div>
+
+                   </div>
+               </a>
+           {% endfor %}
+
+           <div class="pagination-page-info" >
+               {{ pagination.links}}</div>
+{#               <nav aria-label="Page navigation example">#}
+{#                  <ul class="pagination">#}
+{#                    <li class="page-item">#}
+{#                      <a class="page-link" href="#" aria-label="Previous">#}
+{#                        <span aria-hidden="true">&laquo;</span></a>#}
+{#                    </li>#}
+{#                        <li class="page-item"><a class="page-link" href="Lectures/{{y }}">{{ y  }}</a></li>#}
+{##}
+{#                        <li class="page-item">#}
+{#                      <a class="page-link" href="#" aria-label="Next">#}
+{#                        <span aria-hidden="true">&raquo;</span></a>#}
+{#                        </li>#}
+{#                  </ul>#}
+{#                </nav>#}
+           </div>
+        </div>
+       </div>
+    </main>
+{% include 'footer.html' %}
+   </body>
+
+</html>
