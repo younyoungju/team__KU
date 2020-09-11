@@ -14,8 +14,6 @@
 * 01 ~ 05, 99 : STT Text 처리, 형태소분석, LSTM modeling, 코사인유사도 확인
 
 ## Project description
-
-![이미지 39](https://user-images.githubusercontent.com/25517592/92491996-d6d5b000-f22d-11ea-8456-6ba1459c2e00.png)
 ![image](https://user-images.githubusercontent.com/25517592/92908113-e5f07400-f460-11ea-843b-a25eb1c5ad0a.png)
 ![image](https://user-images.githubusercontent.com/25517592/92908129-e983fb00-f460-11ea-8d23-5afe586c1bcf.png)
 ![image](https://user-images.githubusercontent.com/25517592/92908151-ed178200-f460-11ea-9016-54027e812c2d.png)
